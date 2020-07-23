@@ -1,0 +1,56 @@
+{
+  "name": "walterbamert/laravel-fullcalendar",
+  "description": "Updated Laravel component for fullcalendar package base on Edo Freriks original package",
+  "keywords": [
+    "fullcalendar",
+    "javascript",
+    "event",
+    "calendar",
+    "laravel"
+  ],
+  "homepage": "https://github.com/walterbamert/laravel-fullcalendar",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Edo Freriks",
+      "email": "edofre@gmail.com"
+    },
+    {
+      "name": "Walter Bamert",
+      "email": "walter@autoitinc.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "foxy/foxy": "^1.0.0",
+    "laravel/framework": "7.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.5",
+    "foxy/foxy": "^1.0.0",
+    "orchestra/testbench": "^3.8"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "walterbamert\\Fullcalendar\\FullcalendarServiceProvider"
+      ],
+      "aliases": {
+        "Fullcalendar": "walterbamert\\Fullcalendar\\Facades\\Fullcalendar"
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "walterbamert\\Fullcalendar\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "walterbamert\\Fullcalendar\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
