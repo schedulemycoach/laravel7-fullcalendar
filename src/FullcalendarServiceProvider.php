@@ -1,12 +1,12 @@
 <?php
 
-namespace aitcprojects\Fullcalendar;
+namespace schedulemycoach\Fullcalendar;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class FullcalendarServiceProvider
- * @package aitcprojects\Fullcalendar
+ * @package schedulemycoach\Fullcalendar
  */
 class FullcalendarServiceProvider extends ServiceProvider
 {

@@ -1,17 +1,17 @@
 <?php
 
-namespace aitcprojects\Fullcalendar\Test\Integration;
+namespace schedulemycoach\Fullcalendar\Test\Integration;
 
 /**
  * Class JsExpressionTest
- * @package aitcprojects\Fullcalendar\Test\Integration
+ * @package schedulemycoach\Fullcalendar\Test\Integration
  */
 class JsExpressionTest extends \Orchestra\Testbench\TestCase
 {
     /** @test */
     public function generate_event_with_id()
     {
-        $jsExpressionTest = new \aitcprojects\Fullcalendar\JsExpression("
+        $jsExpressionTest = new \schedulemycoach\Fullcalendar\JsExpression("
                 function( view, element ) {
                     console.log(\"View \"+view.name+\" rendered\");
                 }

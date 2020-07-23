@@ -1,13 +1,13 @@
 <?php
 
-namespace aitcprojects\Fullcalendar\Test\Integration;
+namespace schedulemycoach\Fullcalendar\Test\Integration;
 
 use Carbon\Carbon;
-use aitcprojects\Fullcalendar\Event;
+use schedulemycoach\Fullcalendar\Event;
 
 /**
  * Class EventTest
- * @package aitcprojects\Fullcalendar\Test\Integration
+ * @package schedulemycoach\Fullcalendar\Test\Integration
  */
 class EventTest extends \Orchestra\Testbench\TestCase
 {

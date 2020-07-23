@@ -1,12 +1,12 @@
 <?php
 
-namespace aitcprojects\Fullcalendar;
+namespace schedulemycoach\Fullcalendar;
 
 /**
  * Class JsonEncoder
  * Modified from
  * https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseJson.php
- * @package aitcprojects\Fullcalendar
+ * @package schedulemycoach\Fullcalendar
  */
 class JsonEncoder
 {

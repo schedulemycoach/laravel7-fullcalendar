@@ -1,12 +1,12 @@
 <?php
 
-namespace aitcprojects\Fullcalendar\Facades;
+namespace schedulemycoach\Fullcalendar\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Fullcalendar
- * @package aitcprojects\Fullcalendar\Facades
+ * @package schedulemycoach\Fullcalendar\Facades
  */
 class Fullcalendar extends Facade
 {

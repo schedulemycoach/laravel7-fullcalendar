@@ -1,10 +1,10 @@
 <?php
 
-namespace aitcprojects\Fullcalendar;
+namespace schedulemycoach\Fullcalendar;
 
 /**
  * Class Event
- * @package aitcprojects\Fullcalendar
+ * @package schedulemycoach\Fullcalendar
  */
 class Event
 {

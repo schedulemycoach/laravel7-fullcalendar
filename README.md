@@ -14,13 +14,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 To install, either run
 
 ```
-$ php composer require aitcprojects/laravel-fullcalendar
+$ php composer require schedulemycoach/laravel7-fullcalendar
 ```
 
 or add
 
 ```
-"aitcprojects/laravel-fullcalendar": "^3.1"
+"schedulemycoach/laravel7-fullcalendar": "^1.0"
 ```
 
 to the ```require``` section of your `composer.json` file.
@@ -36,7 +36,7 @@ Add the ServiceProvider to your config/app.php
 ```php
 'providers' => [
         ...
-        aitcprojects\Fullcalendar\FullcalendarServiceProvider::class,
+        schedulemycoach\Fullcalendar\FullcalendarServiceProvider::class,
     ],
 ```
 
@@ -44,7 +44,7 @@ And add the facade
 ```php
 'aliases' => [
         ...
-        'Fullcalendar' => aitcprojects\Fullcalendar\Facades\Fullcalendar::class,
+        'Fullcalendar' => schedulemycoach\Fullcalendar\Facades\Fullcalendar::class,
     ],
 ```
 
@@ -62,11 +62,11 @@ By setting the both the include_scripts options in the config file to *false* th
 If you want to manually include the scripts you can call the following static function in your header/footer/etc.
 #### For the Full files
 ```
-    \aitcprojects\Fullcalendar\Fullcalendar::renderFullScriptFiles();
+    \schedulemycoach\Fullcalendar\Fullcalendar::renderFullScriptFiles();
 ```
 #### For the Minified files
 ```
-      \aitcprojects\Fullcalendar\Fullcalendar::renderMinScriptFiles();
+      \schedulemycoach\Fullcalendar\Fullcalendar::renderMinScriptFiles();
 ```
 ### Example
 Below is an example of a controller action configuring the calendar
@@ -74,7 +74,7 @@ Below is an example of a controller action configuring the calendar
     public function index()
     {
         // Generate a new fullcalendar instance
-        $calendar = new \aitcprojects\Fullcalendar\Fullcalendar();
+        $calendar = new \schedulemycoach\Fullcalendar\Fullcalendar();
 
         // You can manually add the objects as an array
         $events = $this->getEvents();
@@ -92,7 +92,7 @@ Below is an example of a controller action configuring the calendar
             'initialView' => 'dayGridMonth',
          /* options are dayGridMonth,dayGridWeek,dayGridDay,dayGrid,timeGridWeek,timeGridDay,timeGrid,listYear,listMonth,listWeek,listDay,list */
             // Add the callbacks
-            'eventClick' => new \aitcprojects\Fullcalendar\JsExpression("
+            'eventClick' => new \schedulemycoach\Fullcalendar\JsExpression("
                 function(event, jsEvent, view) {
                     console.log(event);
                 }
@@ -125,7 +125,7 @@ Below is an example of a controller action configuring the calendar
     private function getEvents()
     {
         $events = [];
-        $events[] = new \aitcprojects\Fullcalendar\Event([
+        $events[] = new \schedulemycoach\Fullcalendar\Event([
             'id'     => 0,
             'title'  => 'Rest',
             'allDay' => true,
@@ -133,14 +133,14 @@ Below is an example of a controller action configuring the calendar
             'end'    => Carbon::create(2016, 11, 20),
         ]);
 
-        $events[] = new \aitcprojects\Fullcalendar\Event([
+        $events[] = new \schedulemycoach\Fullcalendar\Event([
             'id'    => 1,
             'title' => 'Appointment #' . rand(1, 999),
             'start' => Carbon::create(2016, 11, 15, 13),
             'end'   => Carbon::create(2016, 11, 15, 13)->addHour(2),
         ]);
 
-        $events[] = new \aitcprojects\Fullcalendar\Event([
+        $events[] = new \schedulemycoach\Fullcalendar\Event([
             'id'               => 2,
             'title'            => 'Appointment #' . rand(1, 999),
             'editable'         => true,
@@ -150,7 +150,7 @@ Below is an example of a controller action configuring the calendar
             'end'              => Carbon::create(2016, 11, 16, 13),
         ]);
 
-        $events[] = new \aitcprojects\Fullcalendar\Event([
+        $events[] = new \schedulemycoach\Fullcalendar\Event([
             'id'               => 3,
             'title'            => 'Appointment #' . rand(1, 999),
             'editable'         => true,

@@ -1,10 +1,10 @@
 <?php
 
-namespace aitcprojects\Fullcalendar\Test\Integration;
+namespace schedulemycoach\Fullcalendar\Test\Integration;
 
 /**
  * Class EventTest
- * @package aitcprojects\Fullcalendar\Test\Integration
+ * @package schedulemycoach\Fullcalendar\Test\Integration
  */
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -23,7 +23,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \aitcprojects\Fullcalendar\FullcalendarServiceProvider::class,
+            \schedulemycoach\Fullcalendar\FullcalendarServiceProvider::class,
         ];
     }
 
@@ -34,7 +34,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Fullcalendar' => \aitcprojects\Fullcalendar\Facades\Fullcalendar::class,
+            'Fullcalendar' => \schedulemycoach\Fullcalendar\Facades\Fullcalendar::class,
         ];
     }
 }

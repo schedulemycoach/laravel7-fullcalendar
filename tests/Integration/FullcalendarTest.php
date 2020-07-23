@@ -1,10 +1,10 @@
 <?php
 
-namespace aitcprojects\Fullcalendar\Test\Integration;
+namespace schedulemycoach\Fullcalendar\Test\Integration;
 
 /**
  * Class FullcalendarTest
- * @package aitcprojects\Fullcalendar\Test\Integration
+ * @package schedulemycoach\Fullcalendar\Test\Integration
  */
 class FullcalendarTest extends TestCase
 {
@@ -13,7 +13,7 @@ class FullcalendarTest extends TestCase
     public function generate_event_with_id()
     {
         // Generate a new fullcalendar instance
-        $calendar = new \aitcprojects\Fullcalendar\Fullcalendar();
+        $calendar = new \schedulemycoach\Fullcalendar\Fullcalendar();
 
         // Set options
         $calendar->setOptions([
