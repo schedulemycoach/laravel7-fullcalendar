@@ -1,10 +1,10 @@
 <?php
 
-namespace walterbamert\Fullcalendar\Test\Integration;
+namespace aitcprojects\Fullcalendar\Test\Integration;
 
 /**
  * Class EventTest
- * @package walterbamert\Fullcalendar\Test\Integration
+ * @package aitcprojects\Fullcalendar\Test\Integration
  */
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -23,7 +23,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \walterbamert\Fullcalendar\FullcalendarServiceProvider::class,
+            \aitcprojects\Fullcalendar\FullcalendarServiceProvider::class,
         ];
     }
 
@@ -34,7 +34,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Fullcalendar' => \walterbamert\Fullcalendar\Facades\Fullcalendar::class,
+            'Fullcalendar' => \aitcprojects\Fullcalendar\Facades\Fullcalendar::class,
         ];
     }
 }

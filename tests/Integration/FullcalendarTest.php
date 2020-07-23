@@ -1,10 +1,10 @@
 <?php
 
-namespace walterbamert\Fullcalendar\Test\Integration;
+namespace aitcprojects\Fullcalendar\Test\Integration;
 
 /**
  * Class FullcalendarTest
- * @package walterbamert\Fullcalendar\Test\Integration
+ * @package aitcprojects\Fullcalendar\Test\Integration
  */
 class FullcalendarTest extends TestCase
 {
@@ -13,19 +13,19 @@ class FullcalendarTest extends TestCase
     public function generate_event_with_id()
     {
         // Generate a new fullcalendar instance
-        $calendar = new \walterbamert\Fullcalendar\Fullcalendar();
+        $calendar = new \aitcprojects\Fullcalendar\Fullcalendar();
 
         // Set options
         $calendar->setOptions([
             'locale'      => 'nl',
             'weekNumbers' => true,
             'selectable'  => true,
-            'defaultView' => 'agendaWeek',
+            'initialView' => 'dayGridMonth',
         ]);
 
         // This looks terrible, I'm sorry...
         $this->assertEquals("<div id='fullcalendar'></div><!-- fullcalendar css -->
-<link href=\"http://localhost/css/fullcalendar.print.css\" rel=\"stylesheet\" media=\"print\">
+
 <link href=\"http://localhost/css/fullcalendar.css\" rel=\"stylesheet\">
 <!-- moment js -->
 <script src=\"http://localhost/js/moment.js\"></script>
@@ -35,9 +35,11 @@ class FullcalendarTest extends TestCase
 
 
 <script type=\"text/javascript\">
-    jQuery(document).ready(function () {
-        jQuery('#fullcalendar').fullCalendar({\"header\":{\"left\":\"prev,next today\",\"center\":\"title\",\"right\":\"month,agendaWeek,agendaDay\"},\"firstDay\":1,\"locale\":\"nl\",\"weekNumbers\":true,\"selectable\":true,\"defaultView\":\"agendaWeek\",\"events\":[]});
-    });
+ document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('fullcalendar');
+        var calendar = new FullCalendar.Calendar(calendarEl,
+            {\"header\":{\"left\":\"prev,next today\",\"center\":\"title\",\"right\":\"month,agendaWeek,agendaDay\"},\"firstDay\":1,\"locale\":\"nl\",\"weekNumbers\":true,\"selectable\":true,\"defaultView\":\"agendaWeek\",\"events\":[]}
+        )};
 </script>
 ", $calendar->generate());
     }

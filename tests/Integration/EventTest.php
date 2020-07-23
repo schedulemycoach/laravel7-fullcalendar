@@ -1,13 +1,13 @@
 <?php
 
-namespace walterbamert\Fullcalendar\Test\Integration;
+namespace aitcprojects\Fullcalendar\Test\Integration;
 
 use Carbon\Carbon;
-use walterbamert\Fullcalendar\Event;
+use aitcprojects\Fullcalendar\Event;
 
 /**
  * Class EventTest
- * @package walterbamert\Fullcalendar\Test\Integration
+ * @package aitcprojects\Fullcalendar\Test\Integration
  */
 class EventTest extends \Orchestra\Testbench\TestCase
 {
@@ -53,7 +53,7 @@ class EventTest extends \Orchestra\Testbench\TestCase
                 'editable'         => true,
                 'startEditable'    => true,
                 'durationEditable' => true,
-                'rendering'        => Event::RENDERING_BACKGROUND,
+                'display'        => Event::RENDERING_BACKGROUND,
                 'overlap'          => false,
                 'constraint'       => 'businessHours',
                 'color'            => '',
@@ -73,7 +73,7 @@ class EventTest extends \Orchestra\Testbench\TestCase
         $this->assertEquals(true, $event->editable);
         $this->assertEquals(true, $event->startEditable);
         $this->assertNotEquals(false, $event->durationEditable);
-        $this->assertNotEquals(Event::RENDERING_INVERSE_BACKGROUND, $event->rendering);
+        $this->assertNotEquals(Event::RENDERING_INVERSE_BACKGROUND, $event->dislay);
         $this->assertNotEquals(true, $event->overlap);
         $this->assertEquals('businessHours', $event->constraint);
         $this->assertNotEquals('purple', $event->color);

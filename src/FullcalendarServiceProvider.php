@@ -1,17 +1,17 @@
 <?php
 
-namespace walterbamert\Fullcalendar;
+namespace aitcprojects\Fullcalendar;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class FullcalendarServiceProvider
- * @package walterbamert\Fullcalendar
+ * @package aitcprojects\Fullcalendar
  */
 class FullcalendarServiceProvider extends ServiceProvider
 {
     /** Identifier for the service */
-    const IDENTIFIER = 'laravel-fullcalendar';
+    const IDENTIFIER = 'laravel7-fullcalendar';
 
     /**
      * Register bindings in the container.

@@ -1,12 +1,12 @@
 <?php
 
-namespace walterbamert\Fullcalendar\Facades;
+namespace aitcprojects\Fullcalendar\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Fullcalendar
- * @package walterbamert\Fullcalendar\Facades
+ * @package aitcprojects\Fullcalendar\Facades
  */
 class Fullcalendar extends Facade
 {
@@ -15,6 +15,6 @@ class Fullcalendar extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-fullcalendar';
+        return 'laravel7-fullcalendar';
     }
 }
