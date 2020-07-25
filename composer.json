@@ -1,5 +1,5 @@
 {
-  "name": "walterbamert/laravel-fullcalendar",
+  "name": "schedulemycoach/laravel-fullcalendar",
   "description": "Updated Laravel component for fullcalendar package base on Edo Freriks original package",
   "keywords": [
     "fullcalendar",
@@ -8,7 +8,7 @@
     "calendar",
     "laravel"
   ],
-  "homepage": "https://github.com/walterbamert/laravel-fullcalendar",
+  "homepage": "https://github.com/schedulemycoach/laravel-fullcalendar",
   "license": "MIT",
   "authors": [
     {
@@ -33,21 +33,21 @@
   "extra": {
     "laravel": {
       "providers": [
-        "walterbamert\\Fullcalendar\\FullcalendarServiceProvider"
+        "schedulemycoach\\Fullcalendar\\FullcalendarServiceProvider"
       ],
       "aliases": {
-        "Fullcalendar": "walterbamert\\Fullcalendar\\Facades\\Fullcalendar"
+        "Fullcalendar": "schedulemycoach\\Fullcalendar\\Facades\\Fullcalendar"
       }
     }
   },
   "autoload": {
     "psr-4": {
-      "walterbamert\\Fullcalendar\\": "src"
+      "schedulemycoach\\Fullcalendar\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "walterbamert\\Fullcalendar\\Test\\": "tests"
+      "schedulemycoach\\Fullcalendar\\Test\\": "tests"
     }
   },
   "scripts": {
