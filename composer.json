@@ -1,5 +1,5 @@
 {
-  "name": "schedulemycoach/laravel-fullcalendar",
+  "name": "schedulemycoach/laravel7-fullcalendar",
   "description": "Updated Laravel component for fullcalendar package base on Edo Freriks original package",
   "keywords": [
     "fullcalendar",
