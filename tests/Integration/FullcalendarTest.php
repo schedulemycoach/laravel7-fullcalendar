@@ -17,7 +17,7 @@ class FullcalendarTest extends TestCase
 
         // Set options
         $calendar->setOptions([
-            'locale'      => 'nl',
+            'locale'      => 'en',
             'weekNumbers' => true,
             'selectable'  => true,
             'initialView' => 'dayGridMonth',
@@ -25,22 +25,20 @@ class FullcalendarTest extends TestCase
 
         // This looks terrible, I'm sorry...
         $this->assertEquals("<div id='fullcalendar'></div><!-- fullcalendar css -->
-
-<link href=\"http://localhost/css/fullcalendar.css\" rel=\"stylesheet\">
+<link href=\"http://localhost/css/fullcalendar.min.css\" rel=\"stylesheet\">
 <!-- moment js -->
 <script src=\"http://localhost/js/moment.js\"></script>
 <!-- fullcalendar js -->
-<script src=\"http://localhost/js/fullcalendar.js\"></script>
-<script src=\"http://localhost/js/locale-all.js\"></script>
-
-
+<script src=\"http://localhost/js/fullcalendar.min.js\"></script>
+<script src=\"http://localhost/js/locale-all.min.js\"></script>
 <script type=\"text/javascript\">
- document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('fullcalendar');
         var calendar = new FullCalendar.Calendar(calendarEl,
-            {\"header\":{\"left\":\"prev,next today\",\"center\":\"title\",\"right\":\"month,agendaWeek,agendaDay\"},\"firstDay\":1,\"locale\":\"nl\",\"weekNumbers\":true,\"selectable\":true,\"defaultView\":\"agendaWeek\",\"events\":[]}
-        )};
-</script>
-", $calendar->generate());
+            {\"headerToolbar\":{\"left\":\"prev,next today\",\"center\":\"title\",\"right\":\"dayGridMonth,timeGridWeek,timeGridDay\"},\"locale\":\"en\",\"weekNumbers\":true,\"selectable\":true,\"initialView\":\"dayGridMonth\",\"events\":[]}
+        );
+        calendar.render();
+    });
+</script>", $calendar->generate());
     }
 }

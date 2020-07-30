@@ -73,7 +73,7 @@ class EventTest extends \Orchestra\Testbench\TestCase
         $this->assertEquals(true, $event->editable);
         $this->assertEquals(true, $event->startEditable);
         $this->assertNotEquals(false, $event->durationEditable);
-        $this->assertNotEquals(Event::RENDERING_INVERSE_BACKGROUND, $event->dislay);
+        $this->assertNotEquals(Event::RENDERING_INVERSE_BACKGROUND, $event->display);
         $this->assertNotEquals(true, $event->overlap);
         $this->assertEquals('businessHours', $event->constraint);
         $this->assertNotEquals('purple', $event->color);
