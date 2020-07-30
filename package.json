@@ -1,5 +1,5 @@
 {
-  "name": "laravel-fullcalendar",
+  "name": "laravel7-fullcalendar",
   "version": "1.0.0",
   "dependencies": {
     "fullcalendar": "latest",
