@@ -1,8 +1,8 @@
 # Laravel 7 Fullcalendar component
-Notice: This is a fork of  Edofre/laravel-fullcalendar package, which I have grown to love and use. This package is now code compliant for the newer versions of Laravel 7. 
+Notice: This is a fork of  Edofre/laravel-fullcalendar package, which I have grown to love and use. This package is now code compliant for the newer versions of Laravel 7 and FullCalendar v5. 
 This version will now install adding the required NPM packages directly without Bower or the fxp/composer-asset plugin.
 ## Warning
-If you are upgrading from a previous version I would remove Edofre/laravel-fullcalendar package, any unneeded Bower/fxp/composer-asset plugin components and any config and CSS/JS files in your public folder.
+If you are upgrading from a previous version I would remove Edofre/laravel-fullcalendar package, any unneeded Bower/fxp/composer-asset plugin components and any FullCalendar config and FullCalendar CSS/JS files from that previous package in your public folder.
 
 ## Use with Laravel/Homestead
 This package will NOT install properly under Laravel/Homestead at this time because of VirtualBox Issues.
@@ -14,13 +14,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 To install, either run
 
 ```
-$ php composer require schedulemycoach/laravel7-fullcalendar
+$ php composer.phar require schedulemycoach/laravel7-fullcalendar
 ```
 
 or add
 
 ```
-"schedulemycoach/laravel7-fullcalendar": "^1.0"
+"schedulemycoach/laravel7-fullcalendar": "^1.0.5"
 ```
 
 to the ```require``` section of your `composer.json` file.
