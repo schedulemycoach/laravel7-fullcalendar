@@ -2,10 +2,23 @@
 Notice: This is a fork of  Edofre/laravel-fullcalendar package, which I have grown to love and use. This package is now code compliant for the newer versions of Laravel 7 and FullCalendar v5. 
 This version will now install adding the required NPM packages directly without Bower or the fxp/composer-asset plugin.
 ## Warning
-If you are upgrading from a previous version I would remove Edofre/laravel-fullcalendar package, any unneeded Bower/fxp/composer-asset plugin components and any FullCalendar config and FullCalendar CSS/JS files from that previous package in your public folder.
-
+If you are upgrading from a previous version I would remove Edofre/laravel-fullcalendar package, any unneeded Bower/fxp/composer-asset plugin components if composer fails to remove them, the original Edo service provider and alias in the config/app file and any FullCalendar config and FullCalendar CSS/JS files from that previous package in your public folder. You may need to remove the old Edo package lines from the bootstrap/config.php file if you get this error:
+ ```
+Class 'Edofre\Fullcalendar\FullcalendarServiceProvider' not found 
+```
+I also had to remove the FullCalendar, Moment and jQuery from the NPM.
+```
+npm remove fullcalendar
+```
 ## Use with Laravel/Homestead
-This package will NOT install properly under Laravel/Homestead at this time because of VirtualBox Issues.
+This package will NOT install properly under Laravel/Homestead on Windows because of VirtualBox issues **without** following these steps. Right click your command window (Typically GIT Bash) and choose run as Administrator. In your Homestead Yaml file the folders section should look something like this: 
+```
+folders:
+    - map: your_programming_directory
+      to: /home/vagrant/code
+      type: "smb"
+```
+This will require you to enter your Windows User name and password. More information here: https://www.vagrantup.com/docs/synced-folders/smb.html#smb_username. The first time I made this change I provisioned when I brought Vagrant up.
 
 ## Installation
 
@@ -84,7 +97,7 @@ Below is an example of a controller action configuring the calendar
 
         // Set options
         $calendar->setOptions([
-            'locale'      => 'nl',
+            'locale'      => 'en',
             'weekNumbers' => true,
             'selectable'  => true,
             'themeSystem' =>'bootstrap',
@@ -93,8 +106,8 @@ Below is an example of a controller action configuring the calendar
          /* options are dayGridMonth,dayGridWeek,dayGridDay,dayGrid,timeGridWeek,timeGridDay,timeGrid,listYear,listMonth,listWeek,listDay,list */
             // Add the callbacks
             'eventClick' => new \schedulemycoach\Fullcalendar\JsExpression("
-                function(event, jsEvent, view) {
-                    console.log(event);
+                function(data, jsEvent, view) {
+                    console.log(data.event); <-- single event
                 }
             "),
          ]);
