@@ -1,4 +1,4 @@
-# Laravel 7 Fullcalendar component
+# Laravel 7/8/9 Fullcalendar component
 Notice: This is a fork of  Edofre/laravel-fullcalendar package, which I have grown to love and use. This package is now code compliant for the newer versions of Laravel 7 and FullCalendar v5. 
 This version will now install adding the required NPM packages directly without Bower or the fxp/composer-asset plugin.
 ## Warning
